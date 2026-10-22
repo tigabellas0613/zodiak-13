@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#101411" />
+    <meta name="description" content="Temukan rasi Matahari dari tanggal lahirmu, termasuk Ophiuchus, dengan pembagian 13 rasi berbasis astronomi." />
+    <title>Rasi 13 — Peta Langit Kelahiran</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Rasi 13, kembali ke atas">
+        <span class="brand-mark" aria-hidden="true">✳</span>
+        <span>RASI<span class="brand-number">13</span></span>
+      </a>
+      <a class="source-link" href="https://spaceplace.nasa.gov/does-astrology-use/en/" target="_blank" rel="noreferrer">CATATAN ASTRONOMI <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="live-dot"></span> PETA LANGIT KELAHIRAN <span class="eyebrow-divider">/</span> 13 RASI</p>
+          <h1 id="page-title">Langit punya<br /><em>13 cerita.</em></h1>
+          <p class="hero-description">Masukkan tanggal lahir dan lihat rasi yang dilintasi Matahari saat itu. Ophiuchus ikut dihitung.</p>
+          <div class="hero-note"><span class="note-star" aria-hidden="true">✳</span><span>Berbasis posisi Matahari pada rasi bintang, bukan horoskop 12 tanda.</span></div>
+        </div>
+        <figure class="sky-visual">
+          <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=1400&q=85" alt="Awan nebula berwarna di tengah angkasa" />
+          <figcaption><span>KOORDINAT LANGIT</span><span>13° RASI MATAHARI</span></figcaption>
+          <span class="visual-index" aria-hidden="true">01—13</span>
+        </figure>
+      </section>
+
+      <section class="lookup-section" aria-labelledby="lookup-title">
+        <div class="lookup-heading">
+          <p class="eyebrow">MULAI DARI SATU TANGGAL</p>
+          <h2 id="lookup-title">Kapan kamu lahir?</h2>
+        </div>
+        <div class="lookup-layout">
+          <label class="date-field" for="birth-date">
+            <span class="field-label">TANGGAL LAHIR</span>
+            <input id="birth-date" name="birth-date" type="date" autocomplete="bday" aria-describedby="date-hint" />
+            <span class="field-icon" aria-hidden="true">⌄</span>
+          </label>
+          <p class="date-hint" id="date-hint">Hasil muncul otomatis setelah tanggal dipilih.</p>
+        </div>
+        <div class="result" id="result" aria-live="polite" aria-atomic="true" hidden>
+          <div class="result-symbol" id="result-symbol" aria-hidden="true">✳</div>
+          <div class="result-copy">
+            <p class="result-kicker" id="result-kicker">RASI MATAHARI KAMU</p>
+            <h3 id="result-name"></h3>
+            <p class="result-date" id="result-date"></p>
+            <p class="result-description" id="result-description"></p>
+            <p class="personality-note" id="personality-note"></p>
+          </div>
+          <span class="result-count" id="result-count"></span>
+        </div>
+        <p class="error-message" id="error-message" role="status" hidden></p>
+      </section>
+
+      <section class="roster-section" aria-labelledby="roster-title">
+        <div class="roster-heading">
+          <div>
+            <p class="eyebrow">SEPANJANG ORBIT MATAHARI</p>
+            <h2 id="roster-title">13 rasi, satu lintasan</h2>
+          </div>
+          <p class="roster-caption">Tanggal perkiraan berdasarkan pembagian rasi astronomi.</p>
+        </div>
+        <ol class="roster" id="roster"></ol>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>RASI 13 <span>·</span> LANGIT YANG SAMA, CARA BACA YANG BERBEDA</p>
+      <p>Rentang tanggal mengikuti NASA Space Place. Sifat adalah interpretasi astrologi populer, bukan temuan astronomi.</p>
+    </footer>
+  </body>
+</html>
